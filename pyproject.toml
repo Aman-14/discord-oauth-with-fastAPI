@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "dc-auth-fastapi"
+version = "0.1.0"
+description = ""
+authors = ["Aman-14 <akumar999022@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.67.0"
+uvicorn = "^0.14.0"
+Authlib = "^0.15.4"
+httpx = "^0.18.2"
+aioredis = "^1.3.1"
+itsdangerous = "^2.0.1"
+python-decouple = "^3.4"
+motor = "^2.5.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.7b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
