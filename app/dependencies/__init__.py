@@ -1,6 +1,6 @@
 from fastapi import Request
 
-from app.models import User
+from models import User
 
 
 async def fetch_user(req: Request):

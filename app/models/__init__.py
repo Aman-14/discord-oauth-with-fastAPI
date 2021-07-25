@@ -1,4 +1,4 @@
-from app.core import db
+from core import db
 from .base import BaseModel
 
 

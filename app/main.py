@@ -6,10 +6,10 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, RedirectResponse
 from starlette.config import Config
 
-from app.core import Redis, Discord, db
-from app.routers import auth, user
-from app.starlette_session import SessionMiddleware
-from app.starlette_session.backends import BackendType
+from core import Redis, Discord, db
+from routers import auth, user
+from starlette_session import SessionMiddleware
+from starlette_session.backends import BackendType
 
 app = FastAPI()
 config = Config(".env")

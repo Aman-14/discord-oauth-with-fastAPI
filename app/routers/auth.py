@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Request
 
-from app.core import Discord
-from app.main import oauth
-from app.models import User
+from core import Discord
+from main import oauth
+from models import User
 
 router = APIRouter(
     prefix="/auth"

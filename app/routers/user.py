@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 
-from app.dependencies import fetch_user
-from app.models import User
+from dependencies import fetch_user
+from models import User
 
 router = APIRouter(
     prefix="/user"
