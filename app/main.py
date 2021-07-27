@@ -28,7 +28,7 @@ async def on_startup():
         cookie_name="cookie.sid",
         backend_type=BackendType.aioRedis,
         backend_client=Redis.pool,
-        max_age=int(timedelta(days=3).total_seconds())
+        max_age=int(timedelta(days=3).total_seconds()),
     )
     app.include_router(auth.router)
     app.include_router(user.router)
@@ -53,4 +53,4 @@ async def root():
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="127.0.0.1", port=8000)  # noqa
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)  # noqa

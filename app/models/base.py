@@ -2,7 +2,6 @@ import pydantic
 
 
 class BaseModel(pydantic.BaseModel):
-
     @classmethod
     async def create(cls, **kwargs):
         model = cls(**kwargs)
@@ -11,7 +10,8 @@ class BaseModel(pydantic.BaseModel):
 
     @classmethod
     async def find_one(cls, query):
-        return cls(**(await cls.collection.find_one(query)))
+        res = await cls.collection.find_one(query)
+        return cls(**res) if res else None
 
     @classmethod
     async def find(cls, query):
